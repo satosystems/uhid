@@ -2,6 +2,10 @@
 
 obj-m := uhid.o
 KBUILD_DIR := /lib/modules/$(shell uname -r)/build
+ifeq "$(wildcard $(KBUILD_DIR))" ""
+  # overwrite for Chrome OS
+  KBUILD_DIR := /lib/modules/$(lastword $(shell ls /lib/modules | awk '{print length(), $$0}' | sort -nr | awk '{print $$2}'))/build
+endif
 
 all: uhid.ko
 
