@@ -1,0 +1,12 @@
+.uhid.ko.cmd
+.uhid.mod.cmd
+.uhid.mod.o.cmd
+.uhid.o.cmd
+.uhid.o.d
+Module.symvers
+modules.order
+uhid.ko
+uhid.mod
+uhid.mod.c
+uhid.mod.o
+uhid.o
